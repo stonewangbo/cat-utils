@@ -20,6 +20,6 @@
     <mock:service id="topicJmsSender" type="org.springframework.jms.core.JmsOperations"/>
 
 
-    <!--同步借款申请中心状态-->
+    <!--ActiveMQQueue-->
     <mock:service id="sampleHubSyncStatusQueue" type="org.apache.activemq.command.ActiveMQQueue"/>
 </beans>
