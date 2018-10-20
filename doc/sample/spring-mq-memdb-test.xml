@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mock="http://cat.s1coder.com/schema/mock"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+
+
+                        http://cat.s1coder.com/schema/mock
+        				http://cat.s1coder.com/schema/mock/mock-1.0.xsd">
+    <mock:service id="rocketMqProducer" type="com.s1coder.publiccore.mq.rocketmq.spring.RocketMqProducerFactory"/>
+
+
+    <mock:service id="topicSendConnectionFactory" type="org.apache.activemq.ActiveMQConnectionFactory"/>
+
+
+    <mock:service id="pooledTopicSendConnectionFactory" type="org.apache.activemq.pool.PooledConnectionFactory"/>
+
+    <!-- topic template -->
+    <mock:service id="topicJmsSender" type="org.springframework.jms.core.JmsOperations"/>
+
+
+    <!--同步借款申请中心状态-->
+    <mock:service id="creditHubSyncStatusQueue" type="org.apache.activemq.command.ActiveMQQueue"/>
+</beans>

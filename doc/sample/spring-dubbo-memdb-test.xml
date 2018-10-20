@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mock="http://cat.s1coder.com/schema/mock"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+
+
+
+
+
+
+        http://cat.s1coder.com/schema/mock
+        http://cat.s1coder.com/schema/mock/mock-1.0.xsd" default-lazy-init="true">
+
+
+    <!-- 引用的第三方服务接口 -->
+    <mock:service id="applicationFacade" type="com.s1coder.credit.api.application.ApplicationFacade"/>
+    <mock:service id="applicationAuditFacade" type="com.s1coder.credit.api.audit.ApplicationAuditFacade"/>
+    <mock:service id="productFacade" type="com.s1coder.credit.api.product.ProductFacade"/>
+    <mock:service id="creditSyncFacade" type="com.s1coder.credit.api.application.CreditSyncFacade"/>
+    <mock:service id="applyQueryFacade" type="com.s1coder.credit.api.application.ApplyQueryFacade"/>
+    <mock:service id="userAccountBankFacade" type="com.s1coder.user.api.accountbank.UserAccountBankFacade"/>
+    <mock:service id="userAccountFacade" type="com.s1coder.user.api.auth.UserAccountFacade"/>
+    <mock:service id="userBankFacade" type="com.s1coder.user.api.bank.UserBankFacade"/>
+    <mock:service id="authFacade" type="com.s1coder.user.api.auth.AuthFacade"/>
+    <mock:service id="lenderRepaymentFacade" type="com.s1coder.repayment.api.LenderRepaymentFacade"/>
+    <!-- 产品中心 -->
+    <mock:service id="creditCalcCenFacade" type="com.s1coder.credit.product.api.CreditCalcCenFacade"/>
+    <mock:service id="creditProductInfoFacade" type="com.s1coder.credit.product.api.CreditProductInfoFacade"/>
+
+    <!-- 支付服务 -->
+    <mock:service id="payCenterFacade" type="com.creditease.paysystem.client.PayCenterFacade"/>
+    <mock:service id="payInfoFacade" type="com.creditease.paysystem.client.PayInfoFacade"/>
+
+    <!-- 宜人币 -->
+    <mock:service id="fortuneYRBFacade" type="com.s1coder.fortune.client.yrb.YRBFacade"/>
+
+</beans>

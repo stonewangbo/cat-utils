@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="false" scan="true" scanPeriod="5 minutes">
+    <contextName>cat-redis</contextName>
+    <!-- 控制台输出 -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <!-- 			<pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} | %thread | %-5level | %class{200}:%file\(%line\) | %msg%n</pattern> -->
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} | %thread | %-5level | %class{20}:(%line\) | %msg%n</pattern>
+
+        </layout>
+    </appender>
+
+
+    <root level="debug">
+        <appender-ref ref="stdout"/>
+    </root>
+
+</configuration>
