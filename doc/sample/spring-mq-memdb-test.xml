@@ -21,5 +21,5 @@
 
 
     <!--同步借款申请中心状态-->
-    <mock:service id="creditHubSyncStatusQueue" type="org.apache.activemq.command.ActiveMQQueue"/>
+    <mock:service id="sampleHubSyncStatusQueue" type="org.apache.activemq.command.ActiveMQQueue"/>
 </beans>
